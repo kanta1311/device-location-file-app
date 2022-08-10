@@ -1,0 +1,107 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button icon-only (click)="navCtrl.back()">
+        <ion-icon name="home"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      Device Info
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <table width="100%">
+    <tr>
+      <td>
+        capacitor/cordova Version
+      </td>
+      <td>
+        : {{this.device?.cordova}}
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        model
+      </td>
+      <td>
+        : {{this.device?.model}}
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        platform
+      </td>
+      <td>
+        : {{this.device?.platform}}
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        uuid
+      </td>
+      <td>
+        : {{this.device?.uuid}}
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        version
+      </td>
+      <td>
+        : {{this.device?.version}}
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        manufacturer
+      </td>
+      <td>
+        : {{this.device?.manufacturer}}
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        isVirtual
+      </td>
+      <td>
+        : {{this.device?.isVirtual}}
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        serial
+      </td>
+      <td>
+        : {{this.device?.serial}}
+
+      </td>
+    </tr>
+
+
+
+  </table>
+
+  <ion-button (click)="getAcceleration()" color="primary">Start Acceleration</ion-button>
+  <p>Device Current acceleration  {{currentAcceleration | json}}</p>
+
+  <p>X : {{currentAcceleration?.x}}</p>
+  <p>Y : {{currentAcceleration?.y}}</p>
+  <p>Z : {{currentAcceleration?.z}}</p>
+  <p>Timestamp : {{currentAcceleration?.timestamp}}</p>
+</ion-content>

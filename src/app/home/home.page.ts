@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,16 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(public navCtrl:NavController) {}
 
+  gotoDevicePage(){
+    this.navCtrl.navigateForward('device-info')
+  }
+
+  gotoGeolocationPage(){
+    this.navCtrl.navigateForward('geolocation')
+  }
+  gotoPDFGeneratePage(){
+    this.navCtrl.navigateForward('pdfgenerator')
+  }
 }

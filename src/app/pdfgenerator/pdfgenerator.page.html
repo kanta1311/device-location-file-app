@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button icon-only (click)="navCtrl.back()">
+        <ion-icon name="home"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+     PDF Generate
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-button (click)="downloadFile()">Download file</ion-button>
+  <ion-button (click)="writeFile()">Write a file</ion-button>
+</ion-content>

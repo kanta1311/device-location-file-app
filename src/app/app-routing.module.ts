@@ -11,6 +11,18 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'device-info',
+    loadChildren: () => import('./device-info/device-info.module').then( m => m.DeviceInfoPageModule)
+  },
+  {
+    path: 'geolocation',
+    loadChildren: () => import('./geolocation/geolocation.module').then( m => m.GeolocationPageModule)
+  },
+  {
+    path: 'pdfgenerator',
+    loadChildren: () => import('./pdfgenerator/pdfgenerator.module').then( m => m.PdfgeneratorPageModule)
+  },
 ];
 
 @NgModule({
